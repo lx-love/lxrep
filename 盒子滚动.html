@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>			
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<style>
+	.div1{overflow: hidden;position: relative;width: 700px;height: 240px; border: 1px royalblue solid; left: 200px; top: 200px;}
+	li{ float: left; width: 150px; height: 200px; border:#ccc solid 1px; display: block; margin: 5px;}
+  .div1 ul li div{background: red; width: 140px; height: 100px; margin-top: 10px;margin-left: 5px;}
+
+
+</style>
+	</head>
+	<body>
+<div class="div1">
+	<ul>
+	<li><img src="img/image1.jpg" style="width: 50px;height: 50px; border-radius: 50%;"/>
+	<div>111</div>
+	</li>
+	<li><img src="img/image1.jpg" style="width: 50px;height: 50px; border-radius: 50%;"/>
+	<div>222</div></li>
+	<li><img src="img/image1.jpg" style="width: 50px;height: 50px; border-radius: 50%;"/>
+	<div>333</div></li>
+	<li><img src="img/image1.jpg" style="width: 50px;height: 50px; border-radius: 50%;"/>
+	<div>444</div></li>
+	</ul>
+
+</div>
+		
+		
+		
+<script>
+	var sj='{"name":"jack"，"it":["html","css","js","php"],"QQ":[{"id":"2733464076","pwd":"xxx1"},{"id":"12345","pwd":"xxx2"}]}'
+
+
+$(function(){
+    zhuti();	
+$("ul").hover(function(){
+$(this).attr("name","hoved");	
+},function(){
+$(this).removeAttr("name");	
+})	
+})
+var a=-1;
+function zhuti(){
+	if($("ul").attr("name")!="hoved"){	
+		
+		
+//		"https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00Y_Af9D0BxwvMd2ee1faecfHx9f7D&callback=?
+$.getJSON(
+"https://api.weibo.com/2/statuses/home_timeline.json?access_token=2.00dppJ1GTrb_pDed61815c4bhu2mED&callback=?",function(data){
+
+
+        var height=$("li:last").height();
+	
+	$("li:first").before($("li:last"));
+	$("li:first").animate({"height":height},100)
+
+           a++;
+          $("li:first").children("img").attr("src",function(i,old){
+          	
+          	if(a == data.data.statuses.length - 1) {
+          	return data.data.statuses[a].user.profile_image_url
+          	
+          	a = -1;
+          	}else{
+          		return data.data.statuses[a].user.profile_image_url
+          		
+          	}
+          	
+          })
+          
+	       $("li:first").children("div").html(function(i,old){
+
+	        if(a == data.data.statuses.length - 1) {
+          	return data.data.statuses[a].text
+          	
+          	a = -1;
+          	}else{
+          	return data.data.statuses[a].text  
+          	
+          	}	
+	})
+})
+	setTimeout(zhuti,2000);
+}
+}
+
+</script>
+	</body>
+</html>
