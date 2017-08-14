@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>			
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<style type="text/css">
+	ul li{list-style: none;}
+	#div1{border-radius: 30%; font-size:18px;position: relative;width: 120px;height: 50px; text-align: center; background: coral;}
+    #div1 ul{display: none; position: absolute;left:5px;top: 30px; border-radius: 20%;text-align: center;border: 1px solid  darkorange;width: 100px;padding: 4px;}
+    #div1 ul li{padding: 5px 0; border-bottom: 1px dotted #FF8C00;}
+</style>
+	</head>
+	<body>
+	<div id="div1">
+          快来购买啊
+	<ul class="content">
+		<li id="li1" class="lx"><a href="https://www.taobao.com/markets/nanzhuang/2017new?spm=a21bo.50862.201867-main.3.zmXzbo">服装</a>
+			<div id="fuz" class="dd">
+			<a href="#">lalalala</a>
+			<a href="https://guang.taobao.com/ifashion/qiangxin.htm?spm=a21bo.50862.201867-links-0.3.4GS5Rg&amp;catId=16" class="h" data-spm-anchor-id="a21bo.50862.201867-links-0.3">初夏新品</a>
+			<a href="//s.taobao.com/list?style=grid&amp;seller_type=taobao&amp;cps=yes&amp;cat=51108009" class="h" data-spm-anchor-id="a21bo.50862.201867-links-0.4">连衣裙</a>
+			</div>
+		</li>
+		<li id="li2" class="lx"><a href="https://www.taobao.com/markets/3c/shuma?spm=a21bo.50862.201867-main.12.zmXzbo">科技</a>
+			<div id="keji" class="dd">
+				<a href="#">bbbbbbbbbbb</a>
+				<a href="https:&#x2F;&#x2F;s.taobao.com&#x2F;search?q=%E5%A5%B3%E9%9E%8B&amp;refpid=420466_1006&amp;source=tbsy&amp;style=grid&amp;tab=all&amp;pvid=d0f2ec2810bcec0d5a16d5283ce59f68">时尚女鞋</a>
+<a href="&#x2F;&#x2F;s.taobao.com&#x2F;search?spm=1.7274553.1997520241-2.2.TpEKPQ&amp;q=短裤&amp;refpid=430145_1006&amp;source=tbsy&amp;style=grid&amp;tab=all&amp;pvid=d0f2ec2810bcec0d5a16d5283ce59f69">短裤</a>
+<a href="&#x2F;&#x2F;s.taobao.com&#x2F;search?spm=1.7274553.1997520241-2.2.TpEKPQ&amp;q=半身裙&amp;refpid=430146_1006&amp;source=tbsy&amp;style=grid&amp;tab=all&amp;pvid=d0f2ec2810bcec0d5a16d5283ce59f70">半身裙</a>
+<a href="&#x2F;&#x2F;s.taobao.com&#x2F;search?spm=1.7274553.1997520241-2.2.TpEKPQ&amp;q=男士外套&amp;refpid=430147_1006&amp;source=tbsy&amp;style=grid&amp;tab=all&amp;pvid=d0f2ec2810bcec0d5a16d5283ce59f70">男士外套</a>
+<a href="https:&#x2F;&#x2F;s.taobao.com&#x2F;search?q=墙纸&amp;refpid=430148_1006&amp;source=tbsy&amp;style=grid&amp;tab=all&amp;pvid=d0f2ec2810bcec0d5a16d5283ce59f70">墙纸</a>
+<a href="&#x2F;&#x2F;s.taobao.com&#x2F;search?spm=1.7274553.1997520241-2.2.TpEKPQ&amp;q=行车记录仪&amp;refpid=420467_1006&amp;source=tbsy&amp;style=grid&amp;tab=all&amp;pvid=d0f2ec2810bcec0d5a16d5283ce59f69">行车记录仪</a>
+				
+			</div>
+		</li>
+		<li id="li3" class="lx"><a href="https://www.taobao.com/markets/xie/nvxie/index?spm=a21bo.50862.201867-main.5.zmXzbo">鞋子</a>
+			<div id="xiezi" class="dd">
+				<a href="#">ccccccccc</a>
+				<a href="&#x2F;&#x2F;s.taobao.com&#x2F;search?spm=1.7274553.1997520241-2.2.TpEKPQ&amp;q=耳机&amp;refpid=420463_1006&amp;source=tbsy&amp;style=grid&amp;tab=all&amp;pvid=d0f2ec2810bcec0d5a16d5283ce59f67">耳机</a>
+<a href="&#x2F;&#x2F;s.taobao.com&#x2F;search?spm=1.7274553.1997520241-2.2.TpEKPQ&amp;q=女包&amp;refpid=420464_1006&amp;source=tbsy&amp;style=grid&amp;tab=all&amp;pvid=d0f2ec2810bcec0d5a16d5283ce59f68">时尚女包</a>
+<a href="&#x2F;&#x2F;s.taobao.com&#x2F;search?spm=1.7274553.1997520241-2.2.TpEKPQ&amp;q=沙发&amp;refpid=420465_1006&amp;source=tbsy&amp;style=grid&amp;tab=all&amp;pvid=d0f2ec2810bcec0d5a16d5283ce59f68">沙发</a>
+			</div>
+		</li>
+	</ul>	
+	</div>	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#div1").hover(function(){
+			//danru
+		$(".content").fadeIn(1000);
+		//zhangkai
+		$(".content").slideDown(1000);},function(){
+		//danchu
+		$(".content").fadeOut(1000);
+		//shousuo
+		$(".content").slideUp(1000);
+		
+		})
+	
+	var div1=$(".content").find("div").css({"borderRadius":30,"width":500,"height":400,"backgroundColor":"red","position": "absolute","left":103,"top":-20,"display": "none"})
+	console.log(div1)
+ $("#li1").hover(function(){
+$(this).children("div").fadeIn();
+},function(){
+$(this).children("div").fadeOut();
+})
+
+ $("#li2").hover(function(){
+$(this).children("div").fadeIn();
+},function(){
+$(this).children("div").fadeOut();
+})
+ 
+  $("#li3").hover(function(){
+$(this).children("div").fadeIn();
+},function(){
+$(this).children("div").fadeOut();
+})
+
+
+
+})
+	</script>
+	</body>
+</html>
